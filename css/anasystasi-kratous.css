@@ -1,0 +1,122 @@
+/* ========================================
+   ANASYSTASI KRATOUS PAGE STYLES
+======================================== */
+
+.anasystasi-kratous-page {
+    padding: 80px 0 110px;
+    background: var(--white);
+}
+
+.anasystasi-kratous-page .container {
+    max-width: 880px;
+}
+
+/* PAGE HEADER */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.page-header h1 {
+    font-size: clamp(26px, 4vw, 40px);
+    color: var(--black);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* CARDS & SECTIONS */
+.info-card.warning-box {
+    background: #fff5f5;
+    border-left: 4px solid var(--red);
+    padding: 30px 32px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 30px;
+}
+
+.info-card h2 {
+    font-size: 20px;
+    color: var(--black);
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.section-card {
+    background: #f8f9fa;
+    border: 1px solid var(--border);
+    padding: 30px 32px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.section-card h3 {
+    font-size: 19px;
+    color: var(--black);
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.section-card p, .info-card p {
+    font-size: 16.5px;
+    color: #333;
+    line-height: 1.75;
+    margin-bottom: 14px;
+}
+
+.section-card p:last-child, .info-card p:last-child {
+    margin-bottom: 0;
+}
+
+.leader-card {
+    border-left: 4px solid var(--black);
+    background: #ffffff;
+}
+
+.leader-card p.highlight-text {
+    font-weight: 700;
+    color: var(--red);
+    font-size: 17.5px;
+}
+
+.vision-card {
+    background: #f0f7ff;
+    border: 1px solid #cce3ff;
+    border-left: 4px solid #0066cc;
+}
+
+.vision-card h3 {
+    color: #004085;
+}
+
+.final-motto {
+    font-weight: 800;
+    color: var(--black);
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .anasystasi-kratous-page {
+        padding: 50px 0 70px;
+    }
+
+    .info-card.warning-box, .section-card {
+        padding: 22px 20px;
+    }
+
+    .section-card p, .info-card p {
+        font-size: 15.5px;
+    }
+}
