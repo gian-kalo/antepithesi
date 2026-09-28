@@ -1,0 +1,140 @@
+/* ========================================
+   PROLIPSI IATRIKI PAGE STYLES
+======================================== */
+
+.prolipsi-page {
+    padding: 80px 0 110px;
+    background: var(--white);
+}
+
+.prolipsi-page .container {
+    max-width: 880px;
+}
+
+/* PAGE HEADER */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.page-header h1 {
+    font-size: clamp(24px, 3.8vw, 36px);
+    color: var(--black);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+/* INTRO BOX */
+.intro-box {
+    background: #f8f9fa;
+    border: 1px solid var(--border);
+    padding: 30px 32px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.intro-box p {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.75;
+    margin-bottom: 14px;
+}
+
+.intro-box p:last-child {
+    margin-bottom: 0;
+}
+
+.intro-box .highlight-quote {
+    font-weight: 700;
+    color: var(--red);
+    font-size: 18px;
+}
+
+/* MAIN FEATURE CARD */
+.main-feature {
+    background: #fff5f5;
+    border-left: 4px solid var(--red);
+    padding: 30px 32px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 30px;
+}
+
+.main-feature h2 {
+    font-size: 20px;
+    color: var(--black);
+    margin-bottom: 14px;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+}
+
+.main-feature p {
+    font-size: 16.5px;
+    color: #333;
+    line-height: 1.75;
+    margin-bottom: 12px;
+}
+
+.main-feature p:last-child {
+    margin-bottom: 0;
+}
+
+/* GRID CONTAINER */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.grid-card {
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.grid-card h3 {
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.grid-card p {
+    font-size: 15.5px;
+    color: #444;
+    line-height: 1.65;
+    margin: 0;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .prolipsi-page {
+        padding: 50px 0 70px;
+    }
+
+    .intro-box, .main-feature {
+        padding: 22px 20px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-card {
+        padding: 20px;
+    }
+}

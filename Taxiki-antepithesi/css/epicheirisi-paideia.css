@@ -1,0 +1,82 @@
+/* ========================================
+   EPICHEIRISI PAIDEIA PAGE STYLES
+======================================== */
+
+.epicheirisi-paideia-page {
+    padding: 80px 0 110px;
+    background: var(--white);
+}
+
+.epicheirisi-paideia-page .container {
+    max-width: 850px;
+}
+
+/* PAGE HEADER */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.page-header h1 {
+    font-size: clamp(24px, 4vw, 38px);
+    color: var(--black);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+/* CONTENT BODY */
+.text-block {
+    background: #f8f9fa;
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--red);
+    padding: 35px 40px;
+    border-radius: 0 8px 8px 0;
+}
+
+.text-block p {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.text-block p:last-child {
+    margin-bottom: 0;
+}
+
+.text-block p.highlight-text {
+    font-weight: 700;
+    color: var(--red);
+    font-size: 19px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .epicheirisi-paideia-page {
+        padding: 50px 0 70px;
+    }
+
+    .text-block {
+        padding: 24px 20px;
+    }
+
+    .text-block p {
+        font-size: 16px;
+    }
+    
+    .text-block p.highlight-text {
+        font-size: 17px;
+    }
+}

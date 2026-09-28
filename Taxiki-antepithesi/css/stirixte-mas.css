@@ -1,0 +1,121 @@
+/* ========================================
+   SUPPORT US PAGE (STIRIXTE MAS)
+======================================== */
+
+.support-page {
+    padding: 80px 0 110px;
+    background: var(--white);
+}
+
+.support-page .container {
+    max-width: 860px;
+}
+
+/* HEADER */
+.page-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--red);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+.page-header h1 {
+    font-size: clamp(24px, 3.8vw, 40px);
+    color: var(--black);
+    line-height: 1.25;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+/* SUPPORT CARD */
+.support-card {
+    background: #f9f9f9;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.highlight-text {
+    font-size: 19px;
+    color: #222222;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.highlight-text strong {
+    color: var(--red);
+}
+
+/* IBAN BOX */
+.iban-box {
+    background: var(--white);
+    border: 2px dashed var(--red);
+    border-radius: 6px;
+    padding: 25px;
+    display: inline-block;
+    width: 100%;
+    max-width: 600px;
+}
+
+.iban-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: #666666;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+}
+
+.iban-number {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--black);
+    letter-spacing: 0.05em;
+    word-break: break-all;
+    user-select: all;
+    background: #f1f1f1;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.iban-note {
+    display: block;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #888888;
+    font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .support-page {
+        padding: 50px 0 70px;
+    }
+
+    .support-card {
+        padding: 25px 20px;
+    }
+
+    .highlight-text {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .iban-number {
+        font-size: 17px;
+    }
+}
