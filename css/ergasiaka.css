@@ -1,0 +1,142 @@
+/* ==========================================================================
+   ΕΡΓΑΣΙΑΚΑ & ΑΣΦΑΛΕΙΑ - CSS (css/ergasiaka.css)
+   ========================================================================== */
+
+.ergasiaka-page {
+    padding: 60px 0 80px;
+    background-color: #f8f9fa;
+    min-height: 80vh;
+}
+
+/* Header της Σελίδας */
+.ergasiaka-page .page-header {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ergasiaka-page .page-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #c0392b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.ergasiaka-page h1 {
+    font-size: 2.1rem;
+    color: #1a1a1a;
+    line-height: 1.35;
+    margin-bottom: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.ergasiaka-intro {
+    font-size: 1.15rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* Κύριο Περιεχόμενο & Section Blocks */
+.content-body {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-block {
+    background: #ffffff;
+    padding: 32px 35px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border-left: 5px solid #c0392b;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.section-block h2 {
+    font-size: 1.35rem;
+    color: #111111;
+    margin-bottom: 18px;
+    font-weight: 700;
+}
+
+/* Λίστες Περιεχομένου */
+.ergasiaka-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.ergasiaka-list li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 14px;
+    font-size: 1.05rem;
+    color: #333333;
+    line-height: 1.6;
+}
+
+.ergasiaka-list li:last-child {
+    margin-bottom: 0;
+}
+
+.ergasiaka-list li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #c0392b;
+    font-size: 0.8rem;
+    line-height: 1.8;
+}
+
+/* Επισήμανση Κειμένου (Highlight Text) */
+.highlight-text {
+    font-weight: 800;
+    color: #c0392b;
+    background-color: rgba(192, 57, 43, 0.08);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (Κινητά & Tablets)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .ergasiaka-page {
+        padding: 40px 0 60px;
+    }
+
+    .ergasiaka-page h1 {
+        font-size: 1.45rem;
+    }
+
+    .ergasiaka-intro {
+        font-size: 1rem;
+    }
+
+    .section-block {
+        padding: 22px 20px;
+    }
+
+    .section-block h2 {
+        font-size: 1.15rem;
+    }
+
+    .ergasiaka-list li {
+        font-size: 0.98rem;
+    }
+}

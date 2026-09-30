@@ -100,6 +100,53 @@
     font-style: italic;
 }
 
+/*pending*/
+.support-pending-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 50px 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid #c0392b;
+    max-width: 650px;
+    margin: 0 auto 40px;
+}
+
+.support-pending-card h2 {
+    font-size: 1.6rem;
+    color: #1a1a1a;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.support-pending-card p {
+    font-size: 1.05rem;
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.pending-btn {
+    display: inline-block;
+    background-color: #c0392b;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.pending-btn:hover {
+    background-color: #a93226;
+    transform: translateY(-2px);
+    color: #ffffff;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .support-page {
@@ -117,5 +164,14 @@
 
     .iban-number {
         font-size: 17px;
+    }
+
+    /*pending*/
+    .support-pending-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .support-pending-card p {
+        font-size: 0.95rem;
     }
 }
