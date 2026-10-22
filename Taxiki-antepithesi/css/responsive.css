@@ -1,0 +1,301 @@
+/* ==========================================================================
+   RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Γενικός περιορισμός για αποφυγή οριζόντιου scrollbar σε όλες τις συσκευές */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   1. TABLET (max-width: 1000px)
+   ========================================================================== */
+
+@media (max-width: 1000px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .logo::before {
+        width: 8px;
+        height: 28px;
+    }
+
+    .main-navigation {
+        gap: 20px;
+    }
+
+    .main-navigation > a,
+    .nav-link {
+        font-size: 13px;
+    }
+
+    .mega-menu {
+        width: 90vw;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: clamp(48px, 8vw, 76px);
+    }
+
+}
+
+
+/* ==========================================================================
+   2. MOBILE (max-width: 768px)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+
+    /* --- HEADER CONTAINER --- */
+
+    .site-header, 
+    header, 
+    .header-container {
+        position: relative;
+    }
+
+    .header-container {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Κουμπί ☰ */
+    .mobile-menu-button {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 28px;
+        cursor: pointer;
+        color: var(--black, #000000);
+        padding: 5px;
+        z-index: 10000;
+    }
+
+    /* --- ΚΥΡΙΟ ΜΕΝΟΥ (ΑΡΧΙΚΑ ΚΡΥΜΜΕΝΟ) --- */
+
+    .main-navigation {
+        display: none !important;
+        flex-direction: column;
+        align-items: flex-start !important; /* Στοίχιση αριστερά */
+        text-align: left !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        border-bottom: 2px solid var(--border, #e2e8f0);
+        z-index: 9999;
+        gap: 15px;
+    }
+
+    /* Εμφανίζεται μόνο όταν πατηθεί το κουμπί ☰ (.active) */
+    .main-navigation.active {
+        display: flex !important;
+    }
+
+    .main-navigation > a,
+    .nav-link,
+    .open-proposals-menu {
+        font-size: 15px;
+        width: 100%;
+        display: block !important;
+        text-align: left !important;
+    }
+
+    /* --- DROPDOWNS & ΥΠΟΜΕΝΟΥ (ΤΟ ΚΟΜΜΑ / ΠΡΟΤΑΣΕΙΣ) --- */
+
+    .nav-item {
+        width: 100%;
+        text-align: left !important;
+    }
+
+    /* Κρύβουμε ΜΟΝΟ τα εσωτερικά υπομενού (dropdown-menu & mega-menu) */
+    .nav-item .dropdown-menu,
+    .mega-menu {
+        display: none !important;
+        position: static !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 10px 0 10px 15px !important;
+        background: transparent !important;
+        transform: none !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* Εμφάνιση υπομενού όταν ανοίγουν */
+    .nav-item.open .dropdown-menu,
+    .nav-item.open .mega-menu,
+    #megaMenu.mega-menu-open .mega-menu {
+        display: block !important;
+    }
+
+    .dropdown-menu a, 
+    .mega-menu a {
+        display: block;
+        padding: 8px 0;
+        font-size: 14px;
+        color: #333333;
+        text-align: left !important;
+    }
+
+    /* --- HERO --- */
+
+    .hero {
+        min-height: auto;
+        padding: 100px 0;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .hero h1::after {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero p {
+        font-size: 17px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-buttons .button {
+        width: auto;
+        min-width: 220px;
+    }
+
+    /* Κεντράρισμα κειμένου σε όλα τα κουμπιά */
+    .button, 
+    .hero-buttons .button {
+        display: inline-flex !important;
+        align-items: center !important;      /* Κατακόρυφο κεντράρισμα */
+        justify-content: center !important;  /* Οριζόντιο κεντράρισμα */
+        padding: 12px 24px !important;
+        height: auto !important;             /* Αφήνει το padding να ορίσει το ύψος */
+        line-height: 1 !important;           /* Διορθώνει την απόσταση της γραμμής */
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    /* --- PROPOSALS --- */
+
+    .proposals-section {
+        padding: 60px 0;
+    }
+
+    .proposals-header {
+        margin-bottom: 30px;
+    }
+
+    .proposals-header h2 {
+        font-size: 32px;
+    }
+
+    /* Αλλαγή σε 1 στήλη στα κινητά για να μην ξεφεύγουν δεξιά */
+    .proposals-grid {
+        display: grid;
+        grid-template-columns: 1fr !important; /* 1 στήλη αντί για 2 */
+        gap: 20px;
+        width: 100%;
+    }
+
+    .proposals-card {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box; /* Αποτρέπει τα margins/paddings από το να βγαίνουν εκτός */
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* --- SUPPORT --- */
+
+    .support-section {
+        padding: 80px 0;
+    }
+
+    .support-content h2 {
+        font-size: 42px;
+    }
+
+}
+
+
+/* ==========================================================================
+   3. SMALL MOBILE (max-width: 480px)
+   ========================================================================== */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .logo::before {
+        width: 8px;
+        height: 26px;
+    }
+
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-label {
+        font-size: 11px;
+    }
+
+    .proposals-header h2 {
+        font-size: 36px;
+    }
+
+    .proposals-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .proposals-card {
+        min-height: 220px;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .support-content h2 {
+        font-size: 36px;
+    }
+
+    .hero-buttons .button {
+        min-width: 200px;
+    }
+
+}
